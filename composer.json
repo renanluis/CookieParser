@@ -1,6 +1,7 @@
 {
     "name": "renanluis/cookie-parser",
     "description": "A small library to parse cookies data.",
+    "license": "GPL-3.0",
     "require": {
         "php": ">=7.4"
     }
