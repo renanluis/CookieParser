@@ -7,7 +7,7 @@ The preferred method of installation is via [Composer](http://getcomposer.org/).
 command to install the latest version of a package and add it to your project's `composer.json`:
 
 ```bash
-composer require renanluis/CookieParser
+composer require renanluis/cookie-parser
 ```
 
 ## Example
