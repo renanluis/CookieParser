@@ -14,7 +14,7 @@ composer require renanluis/cookie-parser
 **Convert a String of cookies to Array or vice versa**
 ```php
 use CookieParser\CookieParser;
-$cookieString = 'user=test; token=901aa8232dd1097d88s9bb989283zp63223';
+$cookieString = 'user=test; token=Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa';
 $CookieParser = new CookieParser($cookieString);
 var_dump($CookieParser->toArray());
 /* 
@@ -22,21 +22,21 @@ array(2) {
   ["user"]=>
   string(4) "test"
   ["token"]=>
-  string(35) "901aa8232dd1097d88s9bb989283zp63223"
+  string(35) "Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa"
 }
 */
 var_dump($CookieParser->toString());
 /*
-string(52) "user=test; token=901aa8232dd1097d88s9bb989283zp63223"
+string(52) "user=test; token=Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa"
 */
 ```
 ```php
 use CookieParser\CookieParser;
-$cookieArray = array('user' => 'test', 'token' => '901aa8232dd1097d88s9bb989283zp63223');
+$cookieArray = array('user' => 'test', 'token' => 'Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa');
 $CookieParser = new CookieParser($cookieArray);
 var_dump($CookieParser->toString());
 /*
-string(52) "user=test; token=901aa8232dd1097d88s9bb989283zp63223"
+string(52) "user=test; token=Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa"
 */
 var_dump($CookieParser->toArray());
 /* 
@@ -44,7 +44,7 @@ array(2) {
   ["user"]=>
   string(4) "test"
   ["token"]=>
-  string(35) "901aa8232dd1097d88s9bb989283zp63223"
+  string(35) "Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa"
 }
 */
 ```
@@ -54,10 +54,10 @@ array(2) {
 use CookieParser\CookieParser;
 $headers = 'HTTP 1/1 200 OK
 set-cookie: user=test; path=/; expires=Wed, 03 Mar 2021 01:10:47 GMT; secure; HttpOnly; SameSite=Lax
-set-cookie: token=901aa8232dd1097d88s9bb989283zp63223; path=/; expires=Wed, 03 Mar 2021 01:10:47 GMT; secure; HttpOnly; SameSite=Lax';
+set-cookie: token=Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa; path=/; expires=Wed, 03 Mar 2021 01:10:47 GMT; secure; HttpOnly; SameSite=Lax';
 $CookieParser = new CookieParser();
 var_dump($CookieParser->getFromHeaders($headers));
 /*
-string(52) "user=test; token=901aa8232dd1097d88s9bb989283zp63223"
+string(52) "user=test; token=Qf9qbOKsrxfBhUSjFUyCS9zxKhMjdINa"
 */
 ```
