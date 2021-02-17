@@ -1,10 +1,10 @@
 <?php
 /*
-@package CookieParser Request Data
+@package Cookie Parser
 @author Renan Luis (https://github.com/renanluis)
 @version 1.0.0
 */
-namespace lib;
+namespace CookieParser;
 class CookieParser {
     private $cookies;
 
