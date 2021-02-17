@@ -17,7 +17,36 @@ use CookieParser\CookieParser;
 $cookieString = 'user=test; token=901aa8232dd1097d88s9bb989283zp63223';
 $CookieParser = new CookieParser($cookieString);
 var_dump($CookieParser->toArray());
+/* 
+array(2) {
+  ["user"]=>
+  string(4) "test"
+  ["token"]=>
+  string(35) "901aa8232dd1097d88s9bb989283zp63223"
+}
+*/
 var_dump($CookieParser->toString());
+/*
+string(52) "user=test; token=901aa8232dd1097d88s9bb989283zp63223"
+*/
+```
+```php
+use CookieParser\CookieParser;
+$cookieArray = array('user' => 'test', 'token' => '901aa8232dd1097d88s9bb989283zp63223');
+$CookieParser = new CookieParser($cookieArray);
+var_dump($CookieParser->toString());
+/*
+string(52) "user=test; token=901aa8232dd1097d88s9bb989283zp63223"
+*/
+var_dump($CookieParser->toArray());
+/* 
+array(2) {
+  ["user"]=>
+  string(4) "test"
+  ["token"]=>
+  string(35) "901aa8232dd1097d88s9bb989283zp63223"
+}
+*/
 ```
 
 **Get cookies from HTTP Headers string**
@@ -28,4 +57,7 @@ set-cookie: user=test; path=/; expires=Wed, 03 Mar 2021 01:10:47 GMT; secure; Ht
 set-cookie: token=901aa8232dd1097d88s9bb989283zp63223; path=/; expires=Wed, 03 Mar 2021 01:10:47 GMT; secure; HttpOnly; SameSite=Lax';
 $CookieParser = new CookieParser();
 var_dump($CookieParser->getFromHeaders($headers));
+/*
+string(52) "user=test; token=901aa8232dd1097d88s9bb989283zp63223"
+*/
 ```
