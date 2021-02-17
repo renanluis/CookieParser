@@ -1,5 +1,5 @@
 {
-    "name": "renanluis/CookieParser",
+    "name": "renanluis/cookie-parser",
     "description": "A small library to parse cookies data.",
     "require": {
         "php": ">=7.4",
