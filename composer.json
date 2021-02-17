@@ -1,0 +1,8 @@
+{
+    "name": "renanluis/CookieParser",
+    "description": "A small library to parse cookies data.",
+    "require": {
+        "php": ">=7.4",
+        "another-vendor/package": "1.*"
+    }
+}
