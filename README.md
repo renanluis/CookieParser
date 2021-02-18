@@ -1,5 +1,5 @@
 # Cookie Parser
-This library could be used to get all cookies in a header string of a HTTP request and return it either as an array, either as a cookie string.
+This library could be used to get all cookies in a header string of a HTTP request and return it as an array or cookie string.
 
 ## Installation
 
